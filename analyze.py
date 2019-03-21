@@ -23,7 +23,10 @@ def train(data,labels):
 predict the data, based on the training.
 might have to pass it the model? (the train/test ^^^
 '''
-def predict(data,X_train,Y_train,X_test,features_array):
+def predict(data,model,features_array):
+    X_train = model[0]
+    Y_train = model[1]
+    X_test = model [2]
     log_model = LogisticRegression()
     log_model = log_model.fit(X=X_train,y=Y_train)
     y_predict = log_model.predict(X_test)
